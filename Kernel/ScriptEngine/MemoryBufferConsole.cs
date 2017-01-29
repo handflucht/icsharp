@@ -43,6 +43,11 @@ namespace iCSharp.Kernel.ScriptEngine
             this.buffer.Add(new Tuple<string, ConsoleColor>(value + Environment.NewLine, this.ForegroundColor));
         }
 
+        public void WriteLine(string value, ConsoleColor color)
+        {
+            this.buffer.Add(new Tuple<string, ConsoleColor>(value + Environment.NewLine, color));
+        }
+
         public string ReadLine()
         {
             return "Some new line";
